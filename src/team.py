@@ -1,5 +1,6 @@
 ARG_NAME = 'Argentina'
 ARG_EMOJIS = '🇦🇷 🔵⚪'
+
 PSG_NAME = 'PSG'
 PSG_EMOJIS = '🇫🇷 🔵🔴'
 

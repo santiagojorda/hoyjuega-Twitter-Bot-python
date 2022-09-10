@@ -1,5 +1,5 @@
 import schedule, time
-from publisher import tweetMessiPlaysToday
+from src.publisher import tweetMessiPlaysToday
 
 tweetMessiPlaysToday()
 schedule.every().day.do(tweetMessiPlaysToday)

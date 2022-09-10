@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Justpremium Sync Pixel</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body>
+<script>
+    function getTrackUrl(ssp) {
+        var scope = window;
+        var trParams = '?rid=r-7e0f7b20-cec3-4546-a2b0-ef418f638120-3188-487827257'
+            + '&sid=&uid=r-39187a9f-99ee-47fc-b18b-bd3c960d9305-3188-467519908&vr='
+            + '&ru=https%3A%2F%2Fwww.footballcritic.com%2F'
+            + '&tt=' + new Date().getTime()
+            + '&siw=0'
+            + '&sh='+ scope.screen.height
+            + '&sw=' + scope.screen.width
+            + '&wh=' + scope.innerHeight
+            + '&ww=' + scope.innerWidth
+            + '&an=pixel'
+            + '&vn=us-east-1'
+            + '&sd='
+            + '&_c=' + Math.floor((Math.random() * Math.pow(2, 32)) + 1).toString()
+            + '&et=&aid=&said=&ei=&fc=&sp=&at=&cid=0&ist=&mg=&dl=&dlt=&ev=&vt=&zid=0&dr=0&di=&pr=&cw=&ch=&nt=&st='
+            + '&jp=%7B%22jpuid%22%3A%22r-5f33912e-2876-4184-96e7-13a7ea98c44d-3188-467433002%22%2C%22ssp%22%3A%22SSP_VAR%22%7D'
+            + '&ty=cu';
+        trParams = trParams.replace('SSP_VAR', ssp);
+        return 'https://tracking.justpremium.com/tracking.gif' + trParams;
+    }
+
+    function pixelTracking(ssp) {
+        var url = getTrackUrl(ssp);
+        var imgPixel = window.document.createElement("img");
+        imgPixel.style.position = "fixed";
+        imgPixel.style.left = "-9999px";
+        imgPixel.style.top = "-9999px";
+        imgPixel.style.width = "1px";
+        imgPixel.style.height = "1px";
+        imgPixel.src = url;
+        window.document.body.appendChild(imgPixel);
+    }
+
+
+    if (true) {
+        var gg = document.createElement('img');
+        gg.setAttribute('src', 'https://rtb.gumgum.com/getuid/jp?r='+encodeURIComponent('https://match.justpremium.com/match/gg?jp_uid=r-5f33912e-2876-4184-96e7-13a7ea98c44d-3188-467433002&ex_uid=[UID]')+'&us_privacy=');
+        window.document.body.appendChild(gg);
+    }
+
+    if (false) {
+        var dv = document.createElement('img');
+        dv.setAttribute('src', 'https://cm.g.doubleclick.net/pixel?google_nid=gumgum_dbm&google_hm=&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA');
+        window.document.body.appendChild(dv);
+    }
+
+    if (false) {
+        var td = document.createElement('img');
+        td.setAttribute('src', 'https://match.adsrvr.org/track/cmf/generic?ttd_pid=gumgum&ttd_tpi=1&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA');
+        window.document.body.appendChild(td);
+    }
+
+    if (false) {
+        var xn = document.createElement('img');
+        xn.setAttribute('src', 'https://secure.adnxs.com/getuid?https://rtb.gumgum.com/usersync?b=apn&i=$UID');
+        window.document.body.appendChild(xn);
+    }
+
+    if (false) {
+        var yh = document.createElement('img');
+        yh.setAttribute('src', 'https://pr-bh.ybp.yahoo.com/sync/gumgum?gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA');
+        window.document.body.appendChild(yh);
+    }
+
+    if (false) {
+        var mm = document.createElement('img');
+        mm.setAttribute('src', 'https://sync.mathtag.com/sync/img?mt_exid=71&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA&redir=' + encodeURIComponent('https://rtb.gumgum.com/usersync?b=mmh&i=[MM_UUID]'));
+        window.document.body.appendChild(mm);
+    }
+
+    if (false) {
+        var ae = document.createElement('img');
+        ae.setAttribute('src', 'https://sync-tm.everesttech.net/upi/pid/URnmbSKM?gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA&redir=' + encodeURIComponent('https://usersync.gumgum.com/usersync?b=atm&i=${TM_USER_ID}'));
+        window.document.body.appendChild(ae);
+    }
+
+    if (false) {
+        var bs = document.createElement('img');
+        bs.setAttribute('src', 'https://x.bidswitch.net/sync?ssp=gumgum2&user_id=&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA&us_privacy=');
+        window.document.body.appendChild(bs);
+    }
+
+    if (false) {
+        var ac = document.createElement('img');
+        ac.setAttribute('src', 'https://sync.ipredictive.com/d/sync/cookie/generic?partner=gumgum&cspid=9&append=1&cb=1662820246&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA&us_privacy=&redirect='+ encodeURIComponent('https://rtb.gumgum.com/usersync?b=vnt&i='));
+        window.document.body.appendChild(ac);
+    }
+
+    var pixelLimit = '11';
+    if (pixelLimit > 0) {
+        var ggFrame = document.createElement('iframe');
+        ggFrame.setAttribute('frameBorder', 0);
+        ggFrame.setAttribute('src', 'https://rtb.gumgum.com/usync/jp?r='+encodeURIComponent('https://match.justpremium.com/match/gg?jp_uid=r-5f33912e-2876-4184-96e7-13a7ea98c44d-3188-467433002&ex_uid=[UID]')+'&gdpr=0&gdpr_consent=CPfCRQAPfCRQAAKArAENCfCsAP_AAH_AAAwII_Nd_H__bW9j-_5_aft0eY1P9_r37uQzDhfNk-8F3L_W_LwX52E7NF36pq4KmR4Eu1LBIQNlHMHUDUmwaokVryHsak2cpyNKJ7JEknMZOydYGF9Pm1tj-YKY7_5_9_bx2D-t_9v239z378Xf3_dp_2_-_vCfV599jfn9fV_789KP9958v-_8_____3____3_79BH0Akw1biALsyxwZtAwigRAjCsJCqBQAQUAwtEBgA4OCnZWAT6whYAIBQBGBECHEFGDAIAABIAkIgAkCLBAIgCIBAACABEAhAAxMAgsALAwCAAEA0DFEKAAQJCDIgIilMCAqBIIDWyoQSgr0NMIA6zwAoNEbFQAIkkBFIAAkLBwDBEgJWLJA0xRvkAIwQoBRKhQAAA.f_gAAAAAAAAA&us_privacy=&limit=' + pixelLimit);
+        window.document.body.appendChild(ggFrame);
+    }
+
+</script><img src="sync_data/gg.gif"><iframe src="sync_data/jp.html" frameborder="0"></iframe>
+
+
+</body></html>

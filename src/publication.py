@@ -1,7 +1,8 @@
-import api, file
+from src.api import *
+from src.file import *
 from datetime import datetime, date
 
-PUBLICATIONS_DATES_FILE = 'publicationsDates.txt'
+PUBLICATIONS_DATES_FILE = 'src/publicationsDates.txt'
 FORMAT_PUBLICATIONS_DATE = "%d/%m/%Y"
 
 def datetimeFromLine(dateLine):
@@ -16,7 +17,7 @@ def getFormatDateToday():
     return date.today().strftime(FORMAT_PUBLICATIONS_DATE)
 
 def wasPublishedToday():
-    lines = file.getFileLines(PUBLICATIONS_DATES_FILE)
+    lines = getFileLines(PUBLICATIONS_DATES_FILE)
     if len(lines) == 0:
         raise Exception('El archivo de lectura de fechas de publicacion esta vacio')
     dateLine = lines[-1].split('/')
@@ -32,8 +33,8 @@ class Publication():
     def publish(self):
         if not wasPublishedToday():
             writtingDate = getFormatDateToday() + "\n"
-            file.writeAtTheEnd(PUBLICATIONS_DATES_FILE, writtingDate)
-            api.tweet(self._message) 
+            writeAtTheEnd(PUBLICATIONS_DATES_FILE, writtingDate)
+            tweet(self._message) 
         else:
             print('ya hubo publicacion')
 

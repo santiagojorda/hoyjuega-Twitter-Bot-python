@@ -1,2 +1,3 @@
 tweepy=4.12.1
 schedule=1.1.0
+BeautifulSoup=4.9.0

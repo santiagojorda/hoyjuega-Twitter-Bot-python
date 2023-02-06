@@ -1,0 +1,4 @@
+src/__pycache__/
+src/credentials.py
+tests/__pycache__/
+tests/__init__.py
